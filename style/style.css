@@ -1,0 +1,32 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+
+
+
+h1 {
+  font-size: 30pt;
+  text-align: center;
+  color: blue;
+  text-transform: uppercase;
+  margin: 400px;
+}
+
+h2 {
+  font-size: 30pt;
+  text-align: center;
+  color: pink;
+  text-transform: uppercase;
+}
+
+.bigBoy {
+  width: 100vw;
+  height: 100vh;
+  background: url('/images/pollynor/pollynorbeyou.jpg') 100% fixed;
+}
+
+.medium {
+  padding: 400px;
+}

@@ -4,6 +4,7 @@ const express = require('express');
 const logger = require('morgan');
 const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
+const router = require('./routes/feelingRoutes');
 
 const PORT = 3000;
 
@@ -16,7 +17,9 @@ app.use(methodOverride('_method'));
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'style')));
+
+app.use('/', router);
 
 
 app.listen(PORT, () => {
