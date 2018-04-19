@@ -28,5 +28,22 @@ h2 {
 }
 
 .medium {
-  padding: 400px;
+  padding: 300px;
+}
+
+.formCont {
+  display: flex;
+  /*position: relative;*/
+}
+
+.userTxt {
+  color: black;
+}
+
+.indexBtn {
+  margin: auto;
+}
+
+.indexForm {
+  margin: auto;
 }
