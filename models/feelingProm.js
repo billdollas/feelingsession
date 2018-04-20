@@ -31,17 +31,18 @@ function newUser(user) {
 function onePost(id) {
   const queryPromise = db.one(
     `SELECT *
-    FROM post
+    FROM actions
     WHERE post_id = $1`, id);
   return queryPromise;
 }
 
 
-function newPost(id) {
+function newPost(data) {
+  console.log(data);
   const queryPromise = db.one(`
-    INSERT INTO actions
-    VALUES ($/post/)
-    RETURNING *`, id);
+    INSERT INTO actions (post, user_id)
+    VALUES ($/post/, $/user_id/)
+    RETURNING *`, data);
   return queryPromise;
 }
 
@@ -49,23 +50,32 @@ function newPost(id) {
 //maybe an update new user button,
 //everytime clicked opposed to update post
 function updatePost(post) {
+  console.log(post);
   const queryPromise = db.one(`
     UPDATE actions
-    WHERE post = $/post/
-    RETURNING *`);
+    SET post = $/post/
+    WHERE post_id = $/post_id/
+    RETURNING *`, post);
   return queryPromise;
 }
 
 
 //delete post
 function destroyPost(id) {
-  const queryPromise = db.one(`
+  console.log(id);
+  const queryPromise = db.none(`
     DELETE FROM actions
-    WHERE post_id = post_id`, id);
+    WHERE post_id = $1`, id);
+
   return queryPromise;
 }
 
-
+//to vieww eveything from actions
+function viewAllPost() {
+  const queryPromise = db.many(
+    `SELECT * FROM actions`);
+  return queryPromise;
+}
 
 //figure out how to update depending on the user post
 //if user id matches username and post id
@@ -85,7 +95,8 @@ module.exports = {
   newUser,
   newPost,
   updatePost,
-  destroyPost
+  destroyPost,
+  viewAllPost
 }
 
 

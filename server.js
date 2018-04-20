@@ -15,11 +15,11 @@ const session = require('express-session');
 
 const app = express();
 
-//cont auth
-// app.set('superSecret', process.env.SERVER_SECRET);
+//cont auth creates coookies
+// app.set('server_secret', process.env.SERVER_SECRET);
 
 // app.use(session({
-//   secret: app.get('superSecret'),
+//   secret: app.get('server_secret'),
 //   resave: false,
 //   saveUninitialized: false,
 // }));
