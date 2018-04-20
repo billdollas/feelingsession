@@ -9,17 +9,20 @@ CREATE TABLE users
   username VARCHAR (10),
   -- email VARCHAR (30),
   pword VARCHAR (10)
-
 );
+
 
 
 CREATE TABLE actions
 (
   post_id SERIAL PRIMARY KEY,
-  post VARCHAR (1000),
+  post TEXT,
   user_id INT REFERENCES users (id)
 );
 
+
+
+-- so userid is referencing the id in the users table
 
 -- should i reference the images as well to the user
 -- should i have a seperate post id with a serial primary key
