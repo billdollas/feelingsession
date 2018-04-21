@@ -53,6 +53,10 @@ function gone (req, res) {
   })
 }
 
+function form (req, res) {
+  res.render('pages/index');
+}
+
 
 
 
@@ -85,5 +89,6 @@ module.exports = {
   viewOnePost,
   viewNewPost,
   viewFixTxt,
-  gone
+  gone,
+  form
 }

@@ -6,9 +6,9 @@ DROP TABLE IF EXISTS actions CASCADE;
 CREATE TABLE users
 (
   id SERIAL PRIMARY KEY,
-  username VARCHAR (10),
+  username TEXT,
   -- email VARCHAR (30),
-  pword VARCHAR (10)
+  pword VARCHAR (255)
 );
 
 

@@ -1,7 +1,17 @@
 const authRouter = require('express').Router();
 const authService = require('./authService');
-//dont forget to put the paths for the controller, reg controller
-//and view controller refer to repo
+const viewController = require('../../controllers/viewController');
 
 
-authRouter.route('/')
+
+authRouter.get('/', viewController.form )
+authRouter.post('/', authService.register, (post) => console.log(post))
+// at the view controller put posting page
+
+
+authRouter.use((err, req, res, next) => {
+  console.log(err);
+  res.json({error: err});
+});
+
+module.exports = authRouter

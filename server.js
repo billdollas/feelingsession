@@ -10,22 +10,22 @@ const router = require('./routes/feelingRoutes');
 const session = require('express-session');
 
 //auth
-// const authService = require('./user/auth/authService');
-// const authRouter = require('./user/auth/authRouter');
+
+const authRouter = require('./user/auth/authRouter');
 
 const app = express();
 
 //cont auth creates coookies
-// app.set('server_secret', process.env.SERVER_SECRET);
+app.set('server_secret', process.env.SERVER_SECRET);
 
-// app.use(session({
-//   secret: app.get('server_secret'),
-//   resave: false,
-//   saveUninitialized: false,
-// }));
+app.use(session({
+  secret: app.get('server_secret'),
+  resave: false,
+  saveUninitialized: false,
+}));
 
-//route handler auth
-// app.use('/auth', authRouter);
+// route handler auth
+
 // app.get('/', (req, res) =>{
 //   res.render('welcome', { message: 'Welcome, be shady'});
 // });
@@ -47,7 +47,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname, 'style')));
 
-app.use('/', router);
+app.use('/', authRouter);
 
 
 app.listen(PORT, () => {
