@@ -11,7 +11,7 @@ h1 {
   text-align: center;
   color: blue;
   text-transform: uppercase;
-  margin: 400px;
+  /*margin: 250px;*/
 }
 
 h2 {
@@ -21,18 +21,43 @@ h2 {
   text-transform: uppercase;
 }
 
+section {
+  display: flex;
+}
+.top {
+  width: 100vw;
+  height: 500px;
+  /*background-color: pink;*/
+}
+
+.bottom {
+  width: 100vw;
+  height: 500px;
+  /*background-color: black;*/
+}
+
 .bigBoy {
   width: 100vw;
   height: 100vh;
   background: url('/images/pollynor/pollynorbeyou.jpg') 100% fixed;
+  opacity: .8;
 }
 
 .medium {
-  padding: 300px;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  /*padding: 250px;*/
 }
 
 .formCont {
-  display: flex;
+  width: 400px;
+  height: 400px;
+  /*justify-content: center;*/
+  background-color: pink;
+  /*opacity: .3;*/
+  /*margin-left: 500px;*/
+
   /*position: relative;*/
 }
 
@@ -45,5 +70,65 @@ h2 {
 }
 
 .indexForm {
-  margin: auto;
+  /*margin: auto;*/
 }
+
+
+
+
+/*home page style below*/
+
+.postCont {
+  margin: 20px;
+}
+
+.feedBox {
+  width: 400px;
+  height: 800px;
+  border: 1px solid rgba(0, 0, 0, .3);
+  box-shadow: 0 0 24px 3px rgba(0, 0, 0, .2);
+  justify-content: center;
+  margin: 50px;
+}
+
+.textCont {
+
+}
+
+.txtBox {
+  margin: 50px;
+  width: 300px;
+  height: 500px;
+  border: 1px solid rgba(0, 0, 0, .3);
+  box-shadow: 0 0 24px 3px rgba(0, 0, 0, .2);
+  border-radius: 7px;
+  justify-content: center;
+}
+
+.home-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

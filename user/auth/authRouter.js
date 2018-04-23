@@ -3,10 +3,16 @@ const authService = require('./authService');
 const viewController = require('../../controllers/viewController');
 
 
+authRouter.get('/login', viewController.loginForm)
+authRouter.post('/login', authService.login, viewController.homePg)
 
-authRouter.get('/', viewController.form )
-authRouter.post('/', authService.register, (post) => console.log(post))
+authRouter.get('/logout', authService.logout, viewController.loginForm)
+
+authRouter.get('/register', viewController.registerForm )
+authRouter.post('/register', authService.register, viewController.homePg)
+
 // at the view controller put posting page
+//(post) => console.log('hi')
 
 
 authRouter.use((err, req, res, next) => {
@@ -14,4 +20,4 @@ authRouter.use((err, req, res, next) => {
   res.json({error: err});
 });
 
-module.exports = authRouter
+module.exports = authRouter;

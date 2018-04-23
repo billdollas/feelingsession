@@ -1,0 +1,47 @@
+<% include ../boiler/begBoil %>
+
+
+
+<div class="home-wrapper">
+
+
+    <div class="postCont">
+      <div class="feedBox">
+        <h1>this is where post belong</h1>
+
+      </div>
+    </div>
+
+
+
+
+
+
+
+    <div class="txtCont">
+      <div class="txtBox">
+        <!-- <h1>this is where i begin to write post</h1> -->
+        <form class= "txtForm" action="/post" method="POST">
+
+        <label>
+          <textarea name="post"></textarea>
+          <input type="hidden" name="user_id"/>
+        </label>
+
+        <input type="submit" class="txtBtn">
+      </form>
+    </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+<h1 onclick="{ window.location.href = '/users/logout' }">logout</h1>
+
+<% include ../boiler/endBoil %>

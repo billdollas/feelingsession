@@ -12,11 +12,11 @@ function allUsers() {
   return queryPromise;
 }
 
-function oneUser(id) {
+function oneUser(username) {
   const queryPromise = db.one(
     `SELECT *
     FROM users
-    WHERE id = $1`, id);
+    WHERE username = $1`, username);
   return queryPromise;
 }
 

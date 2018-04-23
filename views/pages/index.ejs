@@ -1,20 +1,24 @@
 <% include ../boiler/begBoil %>
 
-
-<h1> TOP SPACE </h1>
+<div class="top">
+  <!-- <h1> TOP SPACE </h1> -->
+</div>
+<!-- <h1> TOP SPACE </h1> -->
 
 <section class="bigBoy">
 <div class="medium">
+
+  <a href="/register"><h1>REGISTER</h1></a>
   <div class="formCont">
-  <form class= "indexForm" action="/" method="POST">
-    <h2 class="userTxt"> SIGN UP/ SIGN IN </h2>
+  <form class= "indexForm" action="/users/login" method="POST">
+    <h2 class="userTxt"> SIGN IN </h2>
     <label>
       <h3> USERNAME </h3>
       <input type="text" name="username">
     </label>
     <label>
       <h3> PASSWORD </h3>
-      <input type="text" name="password">
+      <input type="password" name="pword">
     </label>
     <input type="submit" class="indexBtn">
 
@@ -22,14 +26,16 @@
 </div>
 
 
-  <h2 class="small">
-    MIDDLE SPACE
-  </h2>
 
+  <!-- <h2 class="small">
+    MIDDLE SPACE
+  </h2> -->
 </div>
 </section>
+<div class="bottom">
+  <!-- <h1> BOTTOM SPACE </h1> -->
+</div>
 
-<h1> BOTTOM SPACE </h1>
 
 
 

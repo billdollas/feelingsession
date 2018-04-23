@@ -30,12 +30,7 @@ app.use(session({
 //   res.render('welcome', { message: 'Welcome, be shady'});
 // });
 
-
-
-
-
 const PORT = 3000;
-
 
 
 app.use(logger('dev'));
@@ -47,7 +42,16 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname, 'style')));
 
-app.use('/', authRouter);
+app.use('/', router);
+app.use('/users', authRouter);
+
+app.get('/home', (req, res) => {
+  res.render('pages/home');
+});
+
+app.get('/register', (req, res) =>{
+  res.render('pages/register');
+});
 
 
 app.listen(PORT, () => {

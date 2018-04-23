@@ -19,17 +19,19 @@ function viewOneU(req, res) {
 }
 
 function viewPost(req,res) {
-  res.json({
-    actions: res.locals.actions,
-    status: 'ok'
-  })
+  // res.json({
+  //   actions: res.locals.actions,
+  //   status: 'ok'
+  // })
+  res.render('pages/home');
 }
 
 function viewOnePost(req, res) {
-  res.json({
-    actions: res.locals.actions,
-    status: 'ok'
-  })
+  // res.json({
+  //   actions: res.locals.actions,
+  //   status: 'ok'
+  // })
+  res.render('pages/home');
 }
 
 function viewNewPost(req, res) {
@@ -53,9 +55,19 @@ function gone (req, res) {
   })
 }
 
-function form (req, res) {
+function loginForm (req, res) {
   res.render('pages/index');
 }
+
+function registerForm (req, res) {
+  res.render('pages/register');
+}
+
+function homePg (req, res) {
+  res.redirect('/home');
+}
+
+
 
 
 
@@ -90,5 +102,7 @@ module.exports = {
   viewNewPost,
   viewFixTxt,
   gone,
-  form
+  registerForm,
+  homePg,
+  loginForm
 }

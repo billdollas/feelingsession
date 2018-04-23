@@ -10,6 +10,11 @@ router.get('/', (req,res) => {
   res.render('../views/pages/index');
 });
 
+// router.get('/home', (req,res) => {
+//   res.send('hi');
+//   // res.render('pages/home');
+// });
+
 
 // function allPost(req, res){
 //   db.viewAllPost()
