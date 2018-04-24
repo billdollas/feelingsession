@@ -50,6 +50,7 @@ section {
   height: 100vh;
   background: url('/images/pollynor/pollynorbeyou.jpg') 100% fixed;
   /*opacity: .8;*/
+  box-shadow: inset -1px 2px 33px rgba(0, 0, 0, .3);
 }
 
 .medium {
