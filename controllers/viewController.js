@@ -23,7 +23,10 @@ function viewPost(req,res) {
   //   actions: res.locals.actions,
   //   status: 'ok'
   // })
-  res.render('pages/home');
+  console.log('whateva')
+
+  res.render('pages/home', {post: res.locals.actions});
+  console.log(res.locals.actions)
 }
 
 function viewOnePost(req, res) {
@@ -35,10 +38,12 @@ function viewOnePost(req, res) {
 }
 
 function viewNewPost(req, res) {
-  res.json({
-    actions: res.locals.actions,
-    status: 'ok'
-  })
+  // res.json({
+  //   locals: res.locals,
+  //   status: 'ok'
+  // })
+
+  res.render('pages/home', {post: res.locals.actions});
 }
 
 function viewFixTxt(req, res) {
@@ -64,33 +69,8 @@ function registerForm (req, res) {
 }
 
 function homePg (req, res) {
-  res.redirect('/home');
+  res.render('pages/home', {user: req.session.locals.id, post:res.locals.actions});
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 module.exports = {

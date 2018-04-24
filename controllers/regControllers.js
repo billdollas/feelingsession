@@ -38,14 +38,18 @@ function soloUser(req, res, next) {
 }
 
 function evryPost(req, res, next) {
+  console.log('hey')
   db.viewAllPost()
   .then(data => {
     res.locals.actions = data;
+    console.log('look below')
     console.log(data);
+
     next();
   })
   .catch(err =>{
-    next(err);
+  console.log('error')
+  next(err);
   });
 }
 

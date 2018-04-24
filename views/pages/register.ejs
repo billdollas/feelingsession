@@ -1,21 +1,41 @@
 <% include ../boiler/begBoil %>
 
-<div class="registerForm">
-  <form class= "indexForm" action="/users/register" method="POST">
-    <h2 class="userTxt"> SIGN UP/ SIGN IN </h2>
-    <label>
-      <h3> USERNAME </h3>
-      <input type="text" name="username" height="40">
-    </label>
-    <label>
-      <h3> PASSWORD </h3>
-      <input type="text" name="password">
-    </label>
-    <input type="submit" class="indexBtn">
 
-  </form>
+
+<div class="sides">
+<div class="rightSide">
+
 
 </div>
+
+<div class="registerForm">
+  <center>
+      <form class= "regForm" action="/users/register" method="POST">
+        <h2 class="userTxt"> SIGN UP </h2>
+        <label>
+          <h3 class="signup-input"> USERNAME </h3>
+          <input class="input-register" type="text" name="username" height="40">
+        </label>
+        <label>
+          <h3 class="signup-input"> PASSWORD </h3>
+          <input class="input-register" type="text" name="password">
+        </label><br/>
+        <!-- <input type="submit" class="indexBtn" value="sign up"> -->
+        <button class="indexBtn" type="submit"><i class="material-icons">fingerprint</i></button>
+
+      </form>
+  </center>
+</div>
+
+<div class="leftSide">
+
+
+</div>
+</div>
+
+
+
+
 
 
 

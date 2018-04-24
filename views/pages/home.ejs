@@ -7,7 +7,14 @@
 
     <div class="postCont">
       <div class="feedBox">
-        <h1>this is where post belong</h1>
+        <!-- <h1>this is where post belong</h1> -->
+        <% post.forEach((actions) => { %>
+       <i class='fas fa-user-secret'></i>
+        <div class="postD">
+        <p> <%=actions.post %> </p>
+      </div>
+
+     <% }) %>
 
       </div>
     </div>
@@ -19,24 +26,23 @@
 
 
     <div class="txtCont">
-      <div class="txtBox">
         <!-- <h1>this is where i begin to write post</h1> -->
-        <form class= "txtForm" action="/post" method="POST">
+        <form class="txtForm" action="/post" method="POST">
 
         <label>
-          <textarea name="post"></textarea>
-          <input type="hidden" name="user_id"/>
+          <textarea class="txtArea" name="post" rows="8"></textarea>
+          <input type="hidden" name="user_id" value="<%= user %>"/>
+
+
         </label>
 
-        <input type="submit" class="txtBtn">
+      <button type="submit"><i class='fas fa-pencil-alt'></i></button>
       </form>
     </div>
-    </div>
-
 </div>
 
 
-
+<!-- to style icon use class fas -->
 
 
 

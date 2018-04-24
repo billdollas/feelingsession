@@ -3,8 +3,9 @@ const authService = require('./authService');
 const viewController = require('../../controllers/viewController');
 
 
-authRouter.get('/login', viewController.loginForm)
+
 authRouter.post('/login', authService.login, viewController.homePg)
+authRouter.get('/login', viewController.loginForm)
 
 authRouter.get('/logout', authService.logout, viewController.loginForm)
 

@@ -1,3 +1,11 @@
+@font-face {
+  src: url('/Julius_Sans_One/JuliusSansOne-Regular.ttf');
+  font-family: jules;
+}
+
+
+
+
 * {
   padding: 0;
   margin: 0;
@@ -61,9 +69,7 @@ section {
   /*position: relative;*/
 }
 
-.userTxt {
-  color: black;
-}
+
 
 .indexBtn {
   margin: auto;
@@ -89,13 +95,31 @@ section {
   box-shadow: 0 0 24px 3px rgba(0, 0, 0, .2);
   justify-content: center;
   margin: 50px;
+  overflow: scroll;
 }
 
-.textCont {
-
+.txtArea{
+  width: 100%;
+  height: 100%;
 }
 
-.txtBox {
+.txtCont {
+  margin: 50px;
+}
+
+.fas {
+  font-size: 20px;
+  color: black;
+}
+button{
+  height:30px;
+  width:40px;
+  color: none;
+  background:none;
+  border:none;
+
+}
+/*.txtBox {
   margin: 50px;
   width: 300px;
   height: 500px;
@@ -103,7 +127,7 @@ section {
   box-shadow: 0 0 24px 3px rgba(0, 0, 0, .2);
   border-radius: 7px;
   justify-content: center;
-}
+}*/
 
 .home-wrapper {
   display: flex;
@@ -112,8 +136,93 @@ section {
 }
 
 
+.postD {
+  width: 30%;
+  height: 10%;
+  border: 2px black solid;
+  margin: 20px;
+}
+
+/*REGISTER STYLING BELOW*/
+
+.sides{
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+}
+
+.rightSide {
+  width: 350px;
+  height: 100vh;
+  background: url(/images/pollynor/sevencpollynor_1000.jpg) 100% ;
+  background-position-y: 1014px;
+  background-position-x: -89px;
+  /*margin: right;*/
+  box-shadow: inset -1px 2px 33px rgba(0, 0, 0, .3);
+}
 
 
+.leftSide {
+  width: 350px;
+  height: 100vh;
+  background: url(/images/pollynor/ninepollynorc.jpg) 100% ;
+  background-position-x: -281px;
+  background-position-y: 293px;
+  overflow: hidden;
+  /*margin: left;*/
+  box-shadow: inset -1px 2px 33px rgba(0, 0, 0, .3);
+}
+
+.registerForm {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  /*background-color: rgb(211, 164, 179);*/
+  /*opacity: .5;
+  border: 2px solid black;*/
+  margin: auto;
+  padding: 50px;
+  /*border-radius: 5px;*/
+  /*box-shadow: 0px 0px 20px 3px rgba(0, 0, 0, .2);*/
+  /*color: white;*/
+  /*z-index: 1000;*/
+
+}
+
+.regForm {
+  margin-bottom: 25px;
+  /*color: white;*/
+}
+
+.signup-input {
+  margin-bottom: 25px;
+  font-family: jules;
+  /*  color: white;*/
+}
+
+.input-register{
+  margin-bottom: 15px;
+  height: 25px;
+  border-radius: 6px;
+}
+
+.userTxt {
+  color: black;
+  margin-bottom: 25px;
+  font-family: jules;
+  /*color: white;*/
+}
+
+.material-icons {
+  border: 1px solid rgba(0, 0, 0, .3);
+  border-radius: 25px;
+  padding: 8px;
+  cursor: pointer;
+  transform: scale(1.2);
+  margin-top: 15px;
+}
 
 
 

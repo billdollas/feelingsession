@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const controller = require('../controllers/regControllers');
 const viewController = require('../controllers/viewController');
+const authService = require('../user/auth/authService')
 
 const db = require('../models/feelingProm');
 
@@ -31,10 +32,13 @@ router.get('/', (req,res) => {
 //   });
 // }
 
-router.route('/users')
-.get(controller.evryUser, viewController.viewUsers)
-.post(controller.newYou, viewController.viewNew)
+// router.route('/users')
+// .get(controller.evryUser, viewController.viewUsers)
+// .post(controller.newYou, viewController.viewNew)
 // .post(newTxt)
+
+router.route('/home')
+.post(authService.login, controller.evryPost, viewController.homePg)
 
 
 router.route('/users/:id')
@@ -43,8 +47,8 @@ router.route('/users/:id')
 
 
 router.route('/post')
-.get(controller.evryPost, viewController.viewPost)
-.post(controller.newTxt, viewController.viewNewPost)
+.get(controller.evryPost, (req,res) =>{res.send('hello')} )
+.post(controller.newTxt, controller.evryPost, viewController.homePg)
 
 router.route('/post/:id')
 .get(controller.soloPost, viewController.viewOnePost)

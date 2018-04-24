@@ -20,7 +20,10 @@ function login(req, res, next) {
       message: 'try again'
     }
   }
+
   req.session.user;
+  req.session.locals = user
+
   next();
  })
  .catch(err => {
