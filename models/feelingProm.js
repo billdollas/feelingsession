@@ -25,6 +25,7 @@ function newUser(user) {
     INSERT INTO users (username, pword)
     VALUES ($/username/, $/pword/)
     RETURNING *`, user);
+  console.log(user);
   return queryPromise;
 }
 

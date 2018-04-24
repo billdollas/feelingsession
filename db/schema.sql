@@ -1,4 +1,4 @@
-\c feelings_db
+
 
 DROP TABLE IF EXISTS users CASCADE;
 DROP TABLE IF EXISTS actions CASCADE;

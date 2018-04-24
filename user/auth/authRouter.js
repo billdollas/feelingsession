@@ -4,13 +4,14 @@ const viewController = require('../../controllers/viewController');
 
 
 
-authRouter.post('/login', authService.login, viewController.homePg)
-authRouter.get('/login', viewController.loginForm)
+authRouter.post('/login', authService.login, viewController.homePg);
+authRouter.get('/login', viewController.loginForm);
 
-authRouter.get('/logout', authService.logout, viewController.loginForm)
+authRouter.get('/logout', authService.logout, viewController.loginForm);
 
-authRouter.get('/register', viewController.registerForm )
-authRouter.post('/register', authService.register, viewController.homePg)
+authRouter.post('/register', authService.register, viewController.homePg);
+authRouter.get('/register', viewController.registerForm );
+
 
 // at the view controller put posting page
 //(post) => console.log('hi')

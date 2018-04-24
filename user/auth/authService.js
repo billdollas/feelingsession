@@ -50,6 +50,7 @@ function logout(req, res, next) {
 
 
 function register(req, res, next) {
+  console.log('look below');
   console.log(req.body)
   const salt = parseInt(process.env.SALT)
   const hash = bcrypt.hashSync(req.body.password, salt)
@@ -59,11 +60,12 @@ function register(req, res, next) {
   }
   userDb.newUser(user)
   .then(user => {
-    if (!user) {
-      throw {
-        message: 'cant get in'
-      }
-    }
+    console.log(user);
+    // if (!user) {
+    //   throw {
+    //     message: 'cant get in'
+    //   }
+    // }
     req.session.user = user;
     next();
   })

@@ -5,8 +5,15 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "heroku-postbuild": "npm install --production"
   },
+
+  "engines": {
+    "node": "9.8.0",
+    "npm": "5.6.0"
+  },
+
   "repository": {
     "type": "git",
     "url": "git+https://github.com/billdollas/feelingsession.git"
