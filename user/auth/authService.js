@@ -67,6 +67,7 @@ function register(req, res, next) {
     //   }
     // }
     req.session.user = user;
+    req.session.locals = user
     next();
   })
   .catch(err => {

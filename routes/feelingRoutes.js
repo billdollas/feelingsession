@@ -19,7 +19,7 @@ router.route('/home')
 router.route('/users/:id')
 .get(controller.soloUser, viewController.viewOneU)
 
-
+router.route('/register').post(authService.register, controller.evryPost, viewController.homePg);
 
 router.route('/post')
 .get(controller.evryPost, (req,res) =>{res.send('hello')} )

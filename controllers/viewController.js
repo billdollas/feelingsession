@@ -73,7 +73,6 @@ function homePg (req, res) {
   res.render('pages/home', {user: req.session.locals.id, post:res.locals.actions});
 }
 
-
 module.exports = {
   viewUsers,
   viewNew,
