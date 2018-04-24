@@ -122,6 +122,10 @@ section {
 .txtArea{
   width: 400px;
   height: 400px;
+  margin-top: 20px;
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, .3);
+  box-shadow: 0 0 24px 3px rgba(0, 0, 0, .2);
 }
 
 .txtCont {
@@ -129,10 +133,11 @@ section {
 }
 
 .fas {
-  font-size: 20px;
+  font-size: 30px;
   color: black;
   top: 66px;
   position: relative;
+  color: rgb(156, 171, 162);
 }
 button{
   height:30px;

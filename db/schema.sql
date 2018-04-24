@@ -24,6 +24,4 @@ CREATE TABLE actions
 
 -- so userid is referencing the id in the users table
 
--- should i reference the images as well to the user
--- should i have a seperate post id with a serial primary key
--- or just keep it referencing to the post
+
