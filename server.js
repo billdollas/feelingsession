@@ -30,7 +30,7 @@ app.use(session({
 //   res.render('welcome', { message: 'Welcome, be shady'});
 // });
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 
 app.use(logger('dev'));
