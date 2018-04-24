@@ -19,7 +19,7 @@ const app = express();
 app.set('server_secret', process.env.SERVER_SECRET);
 
 app.use(session({
-  secret: app.get('server_secret'),
+  secret: process.env.SERVER_SECRET,
   resave: false,
   saveUninitialized: false,
 }));
