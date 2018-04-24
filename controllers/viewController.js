@@ -47,10 +47,11 @@ function viewNewPost(req, res) {
 }
 
 function viewFixTxt(req, res) {
-  res.json({
-    actions: res.locals.actions,
-    status: 'ok'
-  })
+  // res.json({
+  //   actions: res.locals.actions,
+  //   status: 'ok'
+  // })
+  res.render('pages/update', {post: res.locals.actions});
 }
 
 function gone (req, res) {

@@ -9,6 +9,7 @@
 * {
   padding: 0;
   margin: 0;
+  font-family: jules;
 }
 
 
@@ -48,21 +49,35 @@ section {
   width: 100vw;
   height: 100vh;
   background: url('/images/pollynor/pollynorbeyou.jpg') 100% fixed;
-  opacity: .8;
+  /*opacity: .8;*/
 }
 
 .medium {
   display: flex;
   justify-content: center;
-  position: absolute;
-  /*padding: 250px;*/
+  position: relative;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  top: 157px;
+  color: white;
+  text-shadow: 0 0 20px black;
+}
+
+.medium h2{
+  color: white;
+  line-height: 130px;
 }
 
 .formCont {
   width: 400px;
   height: 400px;
   /*justify-content: center;*/
-  background-color: pink;
+  background-color: transparent;
   /*opacity: .3;*/
   /*margin-left: 500px;*/
 
@@ -79,6 +94,10 @@ section {
   /*margin: auto;*/
 }
 
+/*.indexTxt {
+  margin-top: 10px;
+}*/
+
 
 
 
@@ -89,7 +108,9 @@ section {
 }
 
 .feedBox {
-  width: 400px;
+  padding: 0 30px;
+  border-radius: 5px;
+  width: 300px;
   height: 800px;
   border: 1px solid rgba(0, 0, 0, .3);
   box-shadow: 0 0 24px 3px rgba(0, 0, 0, .2);
@@ -99,8 +120,8 @@ section {
 }
 
 .txtArea{
-  width: 100%;
-  height: 100%;
+  width: 400px;
+  height: 400px;
 }
 
 .txtCont {
@@ -110,6 +131,8 @@ section {
 .fas {
   font-size: 20px;
   color: black;
+  top: 66px;
+  position: relative;
 }
 button{
   height:30px;
@@ -137,10 +160,40 @@ button{
 
 
 .postD {
-  width: 30%;
+  /*width: 30%;*/
   height: 10%;
   border: 2px black solid;
   margin: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.topHome {
+  width: 100vw;
+  height: 350px;
+  /*background-color: pink;*/
+  background: url(/images/pollynor/nobodyknowssmall.jpg) 100%;
+  background-position-y: -240px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /*background-position: center;*/
+  box-shadow: inset -1px 2px 33px rgba(0, 0, 0, .3);
+}
+
+.bottomHome {
+  width: 100vw;
+  height: 500px;
+  /*background-color: pink;*/
+  background: url(/images/pollynor/nobodyknowssmall.jpg) 100%;
+  background-position-y: -560px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /*background-position: center;*/
+  box-shadow: inset -1px 2px 33px rgba(0, 0, 0, .3);
+
 }
 
 /*REGISTER STYLING BELOW*/
