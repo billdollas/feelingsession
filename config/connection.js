@@ -3,7 +3,7 @@ require('dotenv').config();
 
 const pgp = require('pg-promise')();
 
-const config = require('./dbConfig');
+// const config = require('./dbConfig');
 
 const cn = {
   host: 'localhost',
