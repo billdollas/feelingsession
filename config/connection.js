@@ -7,7 +7,7 @@ const pgp = require('pg-promise')();
 
 const cn = {
   host: 'localhost',
-  port: 5433,
+  port: 5432,
   database: 'feelings_db'
 }
 

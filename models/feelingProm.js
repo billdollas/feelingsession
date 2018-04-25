@@ -1,9 +1,10 @@
 const pgp = require('pg-promise')();
-const config = require('../config/dbConfig');
-const db = pgp(config);
+// const config = require('../config/connection');
+const db = require('../config/connection');
 
 
-
+console.log(db);
+debugger
 
 function allUsers() {
   const queryPromise = db.many(
