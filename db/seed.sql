@@ -1,4 +1,4 @@
-\c feelings_db
+
 
 INSERT INTO users (username, pword)
 VALUES ('username', 'pword');
