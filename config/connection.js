@@ -14,5 +14,6 @@ const cn = {
 
 const db = pgp(process.env.DATABASE_URL || cn);
 
+console.log(process.env.DATABASE_URL);
 
 module.exports = db;
