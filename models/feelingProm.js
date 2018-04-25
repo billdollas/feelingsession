@@ -4,7 +4,7 @@ const db = require('../config/connection');
 
 
 console.log(db);
-debugger
+
 
 function allUsers() {
   const queryPromise = db.many(
